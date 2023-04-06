@@ -1,35 +1,34 @@
 module MyEnumerable
   def all?
-    if !block_given?
-      puts "No block given"
-      return
+    if block_given?
+      each do |n|
+        return false unless yield(n)
+      end
+      return true
     end
-    each do |n|
-      return false unless yield(n)
-    end
-    true
+    puts "No block given"
+    return
   end
 
-  def any?
-    if !block_given?
-      puts "No block given"
-      return
+  def any?(&block)
+    if block_given?
+      result = false
+      each { |item| result = true if block.call(item) }
+      return result
     end
-    each do |n|
-      return true unless yield(n)
-    end
-    false
+    puts "No block given"
+    return
   end
 
   def filter
-    if !block_given?
-      puts "No block given"
-      return
+    if block_given?
+      result = []
+      each do |n|
+        result << n if yield(n)
+      end
+      return result
     end
-    result = []
-    each do |n|
-      result << n if yield(n)
-    end
-    result
+    puts "No block given"
+    return
   end
 end

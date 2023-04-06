@@ -1,7 +1,7 @@
 require_relative 'my_list'
 
 # Create our list
-list = MyList.new ( 1, 2, 3, 4 )
+list = MyList.new(1, 2, 3, 4)
 # <MyList: @list=[1, 2, 3, 4]>
 
 # Test #all?

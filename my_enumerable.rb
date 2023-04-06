@@ -6,8 +6,7 @@ module MyEnumerable
       end
       return true
     end
-    puts "No block given"
-    return
+    puts 'No block given'
   end
 
   def any?(&block)
@@ -16,8 +15,7 @@ module MyEnumerable
       each { |item| result = true if block.call(item) }
       return result
     end
-    puts "No block given"
-    return
+    puts 'No block given'
   end
 
   def filter
@@ -28,7 +26,6 @@ module MyEnumerable
       end
       return result
     end
-    puts "No block given"
-    return
+    puts 'No block given'
   end
 end

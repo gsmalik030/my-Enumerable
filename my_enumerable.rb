@@ -1,8 +1,8 @@
 module MyEnumerable
-  def all?
+  def all?(&block)
     if block_given?
-      each do |n|
-        return false unless yield(n)
+      each do |item|
+        return false unless block.call(item)
       end
       return true
     end
@@ -18,11 +18,11 @@ module MyEnumerable
     puts 'No block given'
   end
 
-  def filter
+  def filter(&block)
     if block_given?
       result = []
       each do |n|
-        result << n if yield(n)
+        result << n if block.call(n)
       end
       return result
     end

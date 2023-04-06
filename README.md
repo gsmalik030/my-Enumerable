@@ -149,12 +149,10 @@ Example:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-<!-- 
-> Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]** -->
+<!-- > Describe 1 - 3 features you will add to the project. -->
+
+N/A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
